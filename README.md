@@ -71,6 +71,6 @@ Database: housing_db
 
 ## Data Sources
 ### Primary Source
-- NYC Open Data Portal
+- [NYC Open Data Portal](https://data.cityofnewyork.us/Housing-Development/Affordable-Housing-Production-by-Building/hg8x-zxpr/about_data)
 - Department of Housing Preservation and Development (HPD)
 - Dataset: Affordable Housing Production by Building
