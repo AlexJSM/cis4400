@@ -53,27 +53,24 @@ The following visualizations have been created to analyze the NYC Affordable Hou
 
 ### 1. Income Level Distribution
 - A pie chart showing the distribution of housing units across different income levels.
-<img src="Income Level Distribution.png" alt="Income Level Distribution" width="800"/>
+<img src="snapshots/Income Level Distribution.png" alt="Income Level Distribution" width="800"/>
 
 ### 2. Geographic Distribution Map
 - A map visualizing the geographic distribution of housing units across NYC boroughs.
-<img src="Geographic Distribution Map.png" alt="Geographic Distribution Map" width="800"/>
+<img src="snapshots/Geographic Distribution Map.png" alt="Geographic Distribution Map" width="800"/>
 
 ### 3. Heat Map Based on Community Board Section
 - A heat map highlighting housing density by community board sections.
-<img src="Heat Map based on Community Board Section.png" alt="Heat Map Based on Community Board Section" width="800"/>
+<img src="snapshots/Heat Map based on Community Board Section.png" alt="Heat Map Based on Community Board Section" width="800"/>
 
 ### 4. Time-based Project Analysis
 - A line chart analyzing project timelines and completion rates.
-<img src="Time-based Project Analysis.png" alt="Time-based Project Analysis" width="800"/>
+<img src="snapshots/Time-based Project Analysis.png" alt="Time-based Project Analysis" width="800"/>
 
 ### 5. Income Category Number of Units by Borough
 - A column chart comparing the number of units by income category across boroughs.
-<img src="Income Category Number of Units by Borough.png" alt="Income Category Number of Units by Borough" width="800"/>
+<img src="snapshots/Income Category Number of Units by Borough.png" alt="Income Category Number of Units by Borough" width="800"/>
 
-### AWS QuickSight Integration
-- Enterprise edition dashboard with direct database connection
-- Real-time data visualization capabilities
 
 ## Setup and Usage
 ### 1. Database Connection
