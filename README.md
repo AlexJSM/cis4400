@@ -1,194 +1,97 @@
-	Analysis of Afforable housing in NYC
-source - https://data.cityofnewyork.us/Housing-Development/Affordable-Housing-Production-by-Building/hg8x-zxpr/about_data
-# Business Requirements
-- Analyze the distribution of affordable housing units across different boroughs
-- Determine which income groups have the most and least access to affordable housing
-# Functional Requirements
-## Analyze the distribution of affordable housing units across different boroughs and neighborhoods.
-- Geographic Distribution Dashboard
-  	- Provide interactive maps showing the distribution of housing units across all boroughs
-  	- Calculate and display density metrics of affordable housing by geographic area
-- Location-Based Analytics
-  	- Track and report on unit distribution patterns across different geographic levels (Borough, Community Board, Census Tract)
-  	- Provide comparative analysis tools to identify areas of high and low unit concentration
-  	- Generate reports on neighborhood-specific housing availability and trends
-- Data Integration and Reporting
-  	- Integrate with existing housing databases to maintain current information
-  	- Generate automated reports on both income-based and geographic distribution metrics
-  	- Provide data export capabilities for further analysis and reporting
+# NYC Affordable Housing Analysis Project
 
-## Determine which income groups have the most and least access to affordable housing
-- Income Level Analysis System
-   	- Calculate and display the total number of units available for each income category (Extremely Low, Very Low, Low, Moderate, Middle)
-   	- Generate comparative reports showing the distribution of units across all income levels
-- Income-Based Unit Tracking
-   - Maintain a database of all housing units categorized by income eligibility
-   - Provide filtering capabilities to analyze units by income level and location
-   	- Generate alerts when significant disparities in unit distribution across income levels are detected
+## Project Overview
+This project analyzes affordable housing production across New York City, focusing on the distribution of housing units across different income levels and geographic areas. The analysis helps identify patterns in housing development and assists in urban planning decisions.
 
+### Business Requirements
+- Track and analyze affordable housing unit distribution across NYC boroughs
+- Monitor different income level categories of housing units
+- Provide insights into project timelines and completion rates
+- Enable geographic analysis of housing density
 
-# Data Sources
+## Data Architecture
+### Data Warehouse Implementation
+- **Platform**: Azure SQL Server
+- **Database**: housing_db
+- **Schema**:
+  - Housing_Units_Fact (Main fact table containing unit counts)
+  - Location_Dim (Geographic information)
+  - Project_Dim (Project details and timeline)
+  - Income_Level_Dim (Income category definitions)
 
-### Primary Dataset
-- **Source**: [NYC Open Data - Affordable Housing Production by Building](https://data.cityofnewyork.us/Housing-Development/Affordable-Housing-Production-by-Building/hg8x-zxpr/about_data)
-- **Contents**:
-  - Project details and identifiers
-  - Location information
-  - Unit counts and distributions
-  - Income level categorizations
+### Documentation
+- **Data Dictionary**: Comprehensive field definitions from NYC Open Data
+- **Data Mapping**: Source-to-destination mapping in NYC_Housing_Data_Mapping.xlsx
+- **ETL Documentation**: Python-based transformation processes
 
-### Secondary Dataset
-- **Source**: [NYC Open Data - Borough Boundaries](https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm)
-- **Contents**:
-  - Geographic boundary data
-  - Borough-specific information
-  - Spatial reference data
- 
-  
-# Information Architecture Description
+## Technical Implementation
+### Technologies Used
+- **Database**: Azure SQL Server
+- **ETL Process**: Python scripts for data transformation
+- **Visualization**: 
+  - Tableau Public for interactive dashboards
+  - AWS QuickSight for cloud-based analytics
 
+### Data Processing Workflow
+1. Data extraction from NYC Open Data
+2. Transformation using Python scripts
+3. Loading into Azure SQL Server
+4. Integration with visualization tools
 
-### 1. Information Collection Layer
-- **Source Data Structure**
-  - Captures raw data from housing production and geographic datasets
-  - Organizes initial data into structured categories:
-    - Project Details (IDs, names, dates)
-    - Location Information (boroughs, community boards)
-    - Housing Units Data (counts, income levels)
-  - Interacts with Data Processing Layer by providing validated input data
+## Visualizations
+### Tableau Dashboard
+- **Live Dashboard**: [NYC Affordable Housing Analysis Dashboard](https://public.tableau.com/app/profile/alex.santana2165/viz/CIS4400HW2VIZUALS/Dashboard1?publish=yes)
+- **Features**:
+  - Geographic Distribution Map
+  - Income Level Distribution
+  - Project Timeline Analysis
+  - Unit Type Comparison
+  - Borough-wise Analysis
 
-### 2. Information Processing Layer
-- **Data Rules & Standards**
-  - Defines and enforces data quality rules
-  - Implements validation criteria for incoming data
-  - Sets transformation rules for standardization
-  - Connects with Integration Layer to ensure data consistency
+### AWS QuickSight Integration
+- Enterprise edition dashboard with direct database connection
+- Real-time data visualization capabilities
 
+## Setup and Usage
+### 1. Database Connection
+```
+Server: housing-sql-server.database.windows.net
+Database: housing_db
+Username: CloudSA09cbcc39
+```
 
-### 3. Information Integration Layer
-- **Unified Data Model**
-  - Standardizes data formats across sources
-  - Maintains common definitions
-  - Creates integration mappings
-  - Feeds standardized data to Storage Layer
+### 2. AWS QuickSight Setup
+- Requires Enterprise edition
+- Configure direct query mode
+- Connect to Azure SQL Server database
 
+### 3. Visualization Access
+- Access Tableau dashboard via the public link above
+- QuickSight dashboards accessible through AWS console
 
-### 4. Information Storage Layer
-- **Fact Information**
-  - Stores quantitative housing measures
-  - Maintains relationships between facts and dimensions
-  - Supports aggregation and analysis
-  - Feeds data to Retrieval Layer
+## Data Sources
+### Primary Source
+- NYC Open Data Portal
+- Department of Housing Preservation and Development (HPD)
+- Dataset: Affordable Housing Production by Building
 
-- **Dimensional Information**
-  - Organizes descriptive attributes
-  - Maintains hierarchical relationships
-  - Supports drill-down capabilities
-  - Provides context to fact data
+### Data Refresh Schedule
+- Source data updated monthly
+- ETL process runs weekly
+- Visualizations refresh daily
 
-### 5. Information Retrieval Layer
-- **Access Layer**
-  - Manages user authentication
-  - Enforces security policies
-  - Controls data access permissions
-  - Interfaces with Presentation Layer
+## Project Team
+- Data Architecture and Implementation
+- ETL Development
+- Dashboard Design and Development
 
-- **Information Presentation**
-  - Generates standardized reports
-  - Powers interactive dashboards
-  - Provides API access
-  - Delivers data visualization
+## Version History
+- v1.0: Initial release with basic visualizations
+- v1.1: Added AWS QuickSight integration
+- v1.2: Enhanced Tableau dashboard with timeline analysis
 
-
-# Data Architecture Description
-
-## Data Processing Workflows
-
-### 1. Data Extraction
-- Raw data collection from NYC Open Data APIs
-- Automated scheduling for regular updates
-- Version control for dataset changes
-
-### 2. Data Cleaning
-- Removal of duplicates and inconsistencies
-- Standardization of formats and units
-- Handling of missing values
-- Data quality checks
-
-### 3. Data Transformation
-- Application of business rules
-- Format standardization
-- Derived metrics calculation
-- Geographic data processing
-
-### 4. Data Validation
-- Data completeness checks
-- Business rule validation
-- Geographic boundary validation
-- Income level categorization verification
-
-### Staging Area
-- Temporary storage for processed data
-- Pre-integration quality checks
-- Version control and backup
-
-### ETL Processes
-- Automated integration workflows
-- Data mapping and transformation
-- Error handling and logging
-- Performance optimization
-
-### Quality Control
-- Continuous monitoring
-- Data quality metrics
-- Alert systems for anomalies
-- Audit trails
-
-## Data Storage Solutions
-
-### Data Warehouse
-#### Fact Tables
-- Housing_Units_Fact
-  - Unit counts
-  - Project references
-  - Location references
-  - Income level references
-
-#### Dimension Tables
-- Project_Dimension
-  - Project details
-  - Timeline information
-  - Status tracking
-- Location_Dimension
-  - Borough information
-  - Community board data
-  - Census tract references
-- Income_Level_Dimension
-  - Income categories
-  - Range definitions
-  - Eligibility criteria
-
-### Data Marts
-- Project Analysis Mart
-- Geographic Distribution Mart
-- Income Level Analysis Mart
-
-## Data Retrieval
-
-### Reporting Services
-- Automated report generation
-- Custom report builder
-- Scheduled distributions
-- Export capabilities
-
-### Analytics Platform
-- Interactive dashboards
-- Geographic visualization
-- Trend analysis tools
-- Comparative analytics
-
-### API Services
-- API endpoints
-- Data access controls
-- Documentation
-- Rate limiting and security
+## Support and Contact
+For technical support or questions:
+- Project Documentation: [Project Wiki]
+- Technical Issues: [GitHub Issues]
+- Contact: team@project.com
