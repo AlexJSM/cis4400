@@ -57,7 +57,7 @@ This project analyzes affordable housing production across New York City, focusi
 ```
 Server: housing-sql-server.database.windows.net
 Database: housing_db
-Username: CloudSA09cbcc39
+
 ```
 
 ### 2. AWS QuickSight Setup
@@ -74,24 +74,3 @@ Username: CloudSA09cbcc39
 - NYC Open Data Portal
 - Department of Housing Preservation and Development (HPD)
 - Dataset: Affordable Housing Production by Building
-
-### Data Refresh Schedule
-- Source data updated monthly
-- ETL process runs weekly
-- Visualizations refresh daily
-
-## Project Team
-- Data Architecture and Implementation
-- ETL Development
-- Dashboard Design and Development
-
-## Version History
-- v1.0: Initial release with basic visualizations
-- v1.1: Added AWS QuickSight integration
-- v1.2: Enhanced Tableau dashboard with timeline analysis
-
-## Support and Contact
-For technical support or questions:
-- Project Documentation: [Project Wiki]
-- Technical Issues: [GitHub Issues]
-- Contact: team@project.com
