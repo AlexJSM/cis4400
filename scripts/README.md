@@ -37,20 +37,3 @@ This project focuses on extracting, transforming, and loading (ETL) NYC affordab
 
 3. **Test Error Handling**:
    - Simulate missing or invalid data and ensure the script logs appropriate error messages.
-
-## Environment Setup
-- Install required Python packages: `pip install -r requirements.txt`
-- Set up environment variables in a `.env` file:
-  ```
-  DB_SERVER=<your_database_server>
-  DB_NAME=<your_database_name>
-  DB_USERNAME=<your_username>
-  DB_PASSWORD=<your_password>
-  ```
-
-## Logs
-- Logs are saved in `etl.log` for debugging and monitoring.
-
-## Contributors
-- [Your Name]
-
