@@ -53,7 +53,7 @@ The following visualizations have been created to analyze the NYC Affordable Hou
 
 ### 1. Income Level Distribution
 - A pie chart showing the distribution of housing units across different income levels.
-<img src="snapshots/Income Level Distribution.png" alt="Income Level Distribution" width="800"/>
+<img src="snapshots/Income Category Number of Units by Borough.png" alt="Income Category Number of Units by Borough" width="800"/>
 
 ### 2. Geographic Distribution Map
 - A map visualizing the geographic distribution of housing units across NYC boroughs.
@@ -69,7 +69,7 @@ The following visualizations have been created to analyze the NYC Affordable Hou
 
 ### 5. Income Category Number of Units by Borough
 - A column chart comparing the number of units by income category across boroughs.
-<img src="snapshots/Income Category Number of Units by Borough.png" alt="Income Category Number of Units by Borough" width="800"/>
+<img src="snapshots/Income Level Distribution.png" alt="Income Level Distribution" width="800"/>
 
 
 ## Setup and Usage
