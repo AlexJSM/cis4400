@@ -18,11 +18,23 @@ This project analyzes affordable housing production across New York City, focusi
   - Location_Dim (Geographic information)
   - Project_Dim (Project details and timeline)
   - Income_Level_Dim (Income category definitions)
+ 
+- This diagram represents the overall data architecture for the project.
+<img src="snapshots/nyc_housing_data_architecture (1).png" alt="Data Architecture" width="800"/>
 
 ### Documentation
 - **Data Dictionary**: Comprehensive field definitions from NYC Open Data
 - **Data Mapping**: Source-to-destination mapping in NYC_Housing_Data_Mapping.xlsx
 - **ETL Documentation**: Python-based transformation processes
+## Architecture and Dimensional Models
+
+### Information Architecture
+- This diagram represents the information flow and architecture.
+<img src="snapshots/nyc_housing_information_architeture.png" alt="Information Architecture" width="800"/>
+
+### Dimensional Model
+- This diagram represents the dimensional model used in the data warehouse.
+<img src="snapshots/Dimensional Model.png" alt="Dimensional Model" width="800"/>
 
 ## Technical Implementation
 ### Technologies Used
